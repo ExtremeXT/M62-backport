@@ -29,9 +29,7 @@ obj-$(CONFIG_NPU_GOLDEN_MATCH)	        += npu-util-comparator.o
 obj-$(CONFIG_FIRMWARE_SRAM_DUMP_DEBUGFS)	        += npu-util-memdump.o
 
 obj-y					+= generated/
-ifdef CONFIG_EXYNOS_SOC_NAME
-obj-y					+= soc/$(CONFIG_EXYNOS_SOC_NAME)/
-endif
+obj-y					+= soc/9820/
 
 ccflags-y += -Idrivers/vision/include -Idrivers/vision/npu/include -Idrivers/vision/npu
 ifdef CONFIG_NPU_LOOPBACK
@@ -41,4 +39,4 @@ ccflags-y += -Idrivers/vision/npu/interface/hardware
 endif
 
 # SoC specific inclusion
-ccflags-y += -Idrivers/vision/npu/soc/$(CONFIG_EXYNOS_SOC_NAME)/include
+ccflags-y += -Idrivers/vision/npu/soc/9820/include
